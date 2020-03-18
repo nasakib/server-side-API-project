@@ -1,0 +1,12 @@
+div.tile.is-ancestor {
+   margin-top: 20px;
+   text-align: center; 
+}
+
+.navbar {
+   height: 8rem;
+}
+div.is-mobile {
+    width: 100%;
+}
+ 
