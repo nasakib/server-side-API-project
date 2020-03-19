@@ -18,7 +18,9 @@ var foodItems = [];
     document.getElementById("pantry").innerHTML = foodItems};
   
 
-   // should trigger only when generage button is clicked    
+   // should trigger only when generate button is clicked 
+  //  $("#").click(function(){
+     
 
   var foodIngredients = foodItems
   var queryFoodURL = "https://api.edamam.com/search?q=" + foodIngredients + "&app_id=4706df62&app_key=85b9a750ec733a4ab16ba62ec5d80e59"
@@ -33,7 +35,7 @@ var foodItems = [];
 
   });
 
-
+// });   this is the closing curley bracket for the generate food recipe function 
 
 var barItems = [];
 
@@ -51,7 +53,10 @@ barItems.push(barInput);
 document.getElementById("blender").innerHTML = barItems};
 
 
-// should trigger only when generage button is clicked 
+// should trigger only when generate button is clicked 
+
+// $("#").click(function(){
+  
 
 var drinkIngredients = barItems
 var queryDrinkURL = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" + drinkIngredients;
@@ -66,17 +71,7 @@ var queryDrinkURL = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.ph
 
   });
 
-    
+// });  this is the closing curley bracket for the generate drink recipes   
 
   
-  // <div class="col">
-  // <input type="text" id="food-input" >
-  // <button onclick= addFood()>Add Food</button>
-  // <p id="pantry"></p>
-  // </div>
-
-  // <div class="col">
-  // <input type="text" id="bar-input" >
-  // <button onclick= addBar()>Add Bar Item</button>
-  // <p id="bar"></p>
-  // </div>
+ 
