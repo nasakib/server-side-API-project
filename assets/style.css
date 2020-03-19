@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 div.tile.is-ancestor {
   margin-top: 20px;
 }
@@ -6,4 +7,10 @@ div.tile.is-ancestor {
 }
 div.is-mobile {
   width: 100%;
+=======
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+>>>>>>> master
 }
