@@ -3,3 +3,14 @@
   justify-content: center;
   align-items: center;
 }
+#pantry,
+#blender {
+  position: relative;
+}
+#generate-food,
+#generate-drink {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+}
