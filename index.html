@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Sup 'N' Sip</title>
+    <title>Hello Bulma!</title>
     <link rel="stylesheet" href="assets/style.css" />
     <link
       rel="stylesheet"
@@ -26,68 +26,79 @@
     <section class="section">
       <div class="container">
         <div class="columns">
+          <div class="tile is-ancestor">
+            <div class="tile is-vertical is-parent">
+              <article
+                class="tile is-child notification is-primary"
+                id="pantry"
+              >
+                <p class="title">
+                  Pantry goes here.
+                </p>
+                <!-- Add food content here, before button, so the button
+                stays at bottom of pantry. -->
+                <button class="button is-fullwidth is-link" id="generate-food">
+                  Generate food recipes
+                </button>
+              </article>
+              <article
+                class="tile is-child notification is-warning"
+                id="food-recipes"
+              >
+                <p class="title">
+                  Food recipes go here.
+                </p>
+              </article>
+            </div>
 
-
-            <div class="tile is-ancestor">
-              <div class="tile is-vertical is-parent">
-                <article class="tile is-child notification is-primary" id="pantry">
-                  <p class="title">
-                    Pantry goes here.
-                  </p>
-                </article>
-                <article
-                  class="tile is-child notification is-warning"
-                  id="food-recipes"
-                >
-                  <p class="title">
-                    Food recipes go here.
-                  </p>
-                </article>
-              </div>
-
-
-        <div class="column is-one-quarter">
-          <div class="card center">
-            <div class="card-content">
-
-              <div class="field">
-                <img src="assets/images/grocerybag.jfif" alt="empty grocery bag" />
-                <label class="label">Grocery Bag</label>
-                <div class="control">
-                  <input class="input" type="text" placeholder="Enter an ingredient..." id="ingredients">
+            <div class="column is-one-quarter">
+              <div class="card center">
+                <div class="card-content">
+    
+                  <div class="field">
+                    <img src="assets/images/grocerybag.jfif" alt="empty grocery bag" />
+                    <label class="label">Grocery Bag</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Enter an ingredient..." id="ingredients">
+                    </div>
+                    <footer class="card-footer">
+                      <p class="card-footer-item">
+                        <button class="button is-primary is-rounded" id="pantrySubmitBtn">Pantry</button>
+                      </p>
+                      <p class="card-footer-item">
+                        <button class="button is-danger is-rounded" id="blenderSubmitBtn">Blender</button>
+                      </p>
+                      </p>
+                    </footer>
+                  </div>
                 </div>
-                <footer class="card-footer">
-                  <p class="card-footer-item">
-                    <button class="button is-primary is-rounded" id="pantrySubmitBtn">Pantry</button>
-                  </p>
-                  <p class="card-footer-item">
-                    <button class="button is-danger is-rounded" id="blenderSubmitBtn">Blender</button>
-                  </p>
-                  </p>
-                </footer>
               </div>
+          </div>
+
+            <div class="tile is-vertical is-parent">
+              <article
+                class="tile is-child notification is-danger"
+                id="blender"
+              >
+                <p class="title">
+                  Blender goes here.
+                </p>
+                <!-- Add drink content here, before button, so the button
+                stays at bottom of blender. -->
+                <button class="button is-fullwidth is-link" id="generate-drink">
+                  Generate drink recipes
+                </button>
+              </article>
+              <article
+                class="tile is-child notification is-success"
+                id="drink-recipes"
+              >
+                <p class="title">
+                  Drink recipes go here.
+                </p>
+              </article>
             </div>
           </div>
-      </div>
-
-      <div class="tile is-vertical is-parent">
-        <article class="tile is-child notification is-danger" id="blender">
-          <p class="title">
-            Blender goes here.
-          </p>
-        </article>
-        <article
-          class="tile is-child notification is-success"
-          id="drink-recipes"
-        >
-          <p class="title">
-            Drink recipes go here.
-          </p>
-        </article>
-      </div>
-      </div>
-
-
         </div>
       </div>
     </section>
