@@ -52,35 +52,28 @@
             </div>
 
             <div class="column is-one-quarter">
-              <div class="card">
+              <div class="card center">
                 <div class="card-content">
-                  <!-- <form> -->
-                  <img
-                    src="assets/images/grocerybag.jfif"
-                    alt="empty grocery bag"
-                  />
-
-                  <input
-                    placeholder="Enter ingredients here..."
-                    id="ingredients"
-                    class="center"
-                  />
-
-                  <footer class="card-footer">
-                    <p class="card-footer-item">
-                      <button class="button" id="food">
-                        <i class="fas fa-arrow-alt-circle-left"></i>
-                      </button>
-                    </p>
-                    <p class="card-footer-item">
-                      <button class="button" id="drink">
-                        <i class="fas fa-arrow-alt-circle-right"></i>
-                      </button>
-                    </p>
-                  </footer>
+    
+                  <div class="field">
+                    <img src="assets/images/grocerybag.jfif" alt="empty grocery bag" />
+                    <label class="label">Grocery Bag</label>
+                    <div class="control">
+                      <input class="input" type="text" placeholder="Enter an ingredient..." id="ingredients">
+                    </div>
+                    <footer class="card-footer">
+                      <p class="card-footer-item">
+                        <button class="button is-primary is-rounded" id="pantrySubmitBtn">Pantry</button>
+                      </p>
+                      <p class="card-footer-item">
+                        <button class="button is-danger is-rounded" id="blenderSubmitBtn">Blender</button>
+                      </p>
+                      </p>
+                    </footer>
+                  </div>
                 </div>
               </div>
-            </div>
+          </div>
 
             <div class="tile is-vertical is-parent">
               <article
