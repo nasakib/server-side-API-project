@@ -5,7 +5,7 @@ var groceriesEl = document.getElementById("groceries");
 var ingredientsEl = document.getElementById("ingredients");
 var inputEl =  document.getElementById("food-input");
 
-$("#food").click(function(){
+$("#pantrySubmitBtn").click(function(){
   addFood()
 });
 
@@ -41,7 +41,7 @@ var barItems = [];
 
 console.log(barItems)
 
-$("#drink").click(function(){
+$("#blenderSubmitBtn").click(function(){
   addBar()
 });
 
