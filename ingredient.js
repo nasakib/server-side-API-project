@@ -5,18 +5,53 @@ var groceriesEl = document.getElementById("groceries");
 var ingredientsEl = document.getElementById("ingredients");
 var inputEl =  document.getElementById("food-input");
 
+$("#food").click(function(){
+  addFood()
+});
+
+var foodItems = [];
+
+    function addFood() {
+  
+    var foodInput = $("#ingredients").val();
+    foodItems.push(foodInput);
+    document.getElementById("pantry").innerHTML = foodItems};
+  
+
+   // should trigger only when generage button is clicked    
+
+  var foodIngredients = foodItems
+  var queryFoodURL = "https://api.edamam.com/search?q=" + foodIngredients + "&app_id=4706df62&app_key=85b9a750ec733a4ab16ba62ec5d80e59"
+
+  $.ajax({
+    url: queryFoodURL,
+    method: "GET"
+  })
+  
+  .then(function(response) {
+        console.log(response.hits)
+
+  });
+
+
 
 var barItems = [];
 
 console.log(barItems)
 
+$("#drink").click(function(){
+  addBar()
+});
+
 function addBar() {
 
-var barInput = $("#bar-input").val();
+
+var barInput = $("#ingredients").val();
 barItems.push(barInput);
-document.getElementById("bar").innerHTML = barItems};
+document.getElementById("blender").innerHTML = barItems};
 
 
+// should trigger only when generage button is clicked 
 
 var drinkIngredients = barItems
 var queryDrinkURL = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" + drinkIngredients;
@@ -31,25 +66,17 @@ var queryDrinkURL = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.ph
 
   });
 
-    var foodItems = [];
-
-    function addFood() {
-  
-    var foodInput = $("#food-input").val();
-    foodItems.push(foodInput);
-    document.getElementById("pantry").innerHTML = foodItems};
-  
-  var foodIngredients = foodItems
-  var queryFoodURL = "https://api.edamam.com/search?q=" + foodIngredients + "&app_id=4706df62&app_key=85b9a750ec733a4ab16ba62ec5d80e59"
-
-  $.ajax({
-    url: queryFoodURL,
-    method: "GET"
-  })
-  
-  .then(function(response) {
-        console.log(response.hits)
-
-  });
+    
 
   
+  // <div class="col">
+  // <input type="text" id="food-input" >
+  // <button onclick= addFood()>Add Food</button>
+  // <p id="pantry"></p>
+  // </div>
+
+  // <div class="col">
+  // <input type="text" id="bar-input" >
+  // <button onclick= addBar()>Add Bar Item</button>
+  // <p id="bar"></p>
+  // </div>
