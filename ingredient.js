@@ -30,8 +30,7 @@ var queryFoodURL =
 $.ajax({
   url: queryFoodURL,
   method: "GET"
-})
-.then(function(response) {
+}).then(function(response) {
   console.log(response.hits);
 });
 
@@ -43,6 +42,7 @@ console.log(barItems);
 
 $("#blenderSubmitBtn").click(function() {
   addBar();
+  $("#ingredients").val("");
 });
 
 function addBar() {
