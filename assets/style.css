@@ -1,10 +1,5 @@
-div.tile.is-ancestor {
-   margin-top: 20px;
- }
- .navbar {
-   height: 8rem;
- }
- div.is-mobile {
-   width: 100%;
- }
- 
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
