@@ -17,11 +17,8 @@ var foodItems = [];
     foodItems.push(foodInput);
     document.getElementById("pantry").innerHTML = foodItems};
   
-
-   // should trigger only when generate button is clicked 
-  //  $("#").click(function(){
+   $("#generate-food").click(function(){
      
-
   var foodIngredients = foodItems
   var queryFoodURL = "https://api.edamam.com/search?q=" + foodIngredients + "&app_id=4706df62&app_key=85b9a750ec733a4ab16ba62ec5d80e59"
 
@@ -32,14 +29,10 @@ var foodItems = [];
   
   .then(function(response) {
         console.log(response.hits)
-
   });
-
-// });   this is the closing curley bracket for the generate food recipe function 
+});   
 
 var barItems = [];
-
-console.log(barItems)
 
 $("#blenderSubmitBtn").click(function(){
   addBar()
@@ -47,17 +40,13 @@ $("#blenderSubmitBtn").click(function(){
 
 function addBar() {
 
-
 var barInput = $("#ingredients").val();
 barItems.push(barInput);
 document.getElementById("blender").innerHTML = barItems};
 
 
-// should trigger only when generate button is clicked 
-
-// $("#").click(function(){
+$("#generate-drink").click(function(){
   
-
 var drinkIngredients = barItems
 var queryDrinkURL = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" + drinkIngredients;
  
@@ -68,10 +57,8 @@ var queryDrinkURL = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.ph
   }) 
   .then(function(response) {
         console.log(response)
-
   });
-
-// });  this is the closing curley bracket for the generate drink recipes   
+});  
 
   
  
