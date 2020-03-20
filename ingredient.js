@@ -70,19 +70,19 @@ var queryDrinkURL = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.ph
   });
 });  
 
-
+var storedPantry = localStorage.getItem("pantryItems");
+console.log(storedPantry)
+var storedBlender = localStorage.getItem("blenderItems");
 
 function storePantry (){
-
 localStorage.setItem("pantryItems",JSON.stringify([foodItems]));
-console.log(localStorage)
- };
 
- function storeBlender (){
+};
 
+function storeBlender (){
 localStorage.setItem("blenderItems",JSON.stringify([barItems]));
-console.log(localStorage)
-   };
+
+};
  
 
 });
