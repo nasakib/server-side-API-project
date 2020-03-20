@@ -27,7 +27,7 @@ function addFood() {
 }
 
 $("#generate-food").click(function() {
-  pantryEl.value = ''
+  pantryEl.textContent = ''
   var foodIngredients = foodItems;
   var queryFoodURL =
     "https://api.edamam.com/search?q=" +
@@ -61,6 +61,7 @@ function addBar() {
 
 
 $("#generate-drink").click(function() {
+  blenderEl.textContent = ''
   var drinkIngredients = barItems;
   var queryDrinkURL =
     "https://www.thecocktaildb.com/api/json/v2/9973533/filter.php?i=" +
