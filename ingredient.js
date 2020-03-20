@@ -13,6 +13,8 @@ var inputEl = document.getElementById("food-input");
 $("#pantrySubmitBtn").click(function(){
   addFood()
   storePantry()
+  ingredientsEl.value = ''
+  
 });
 
 var foodItems = [];
@@ -21,9 +23,11 @@ function addFood() {
   var foodInput = $("#ingredients").val();
   foodItems.push(foodInput);
   document.getElementById("pantry").innerHTML = foodItems;
+  
 }
 
 $("#generate-food").click(function() {
+  pantryEl.value = ''
   var foodIngredients = foodItems;
   var queryFoodURL =
     "https://api.edamam.com/search?q=" +
@@ -45,6 +49,8 @@ var barItems = [];
 $("#blenderSubmitBtn").click(function(){
   addBar()
   storeBlender()
+  ingredientsEl.value = ''
+
 });
 
 function addBar() {
@@ -65,12 +71,14 @@ $("#generate-drink").click(function() {
     method: "GET"
   }).then(function(response) {
     console.log(response);
+
   });
+  
 });
 
 var storedPantry = localStorage.getItem("pantryItems");
-console.log(storedPantry)
 var storedBlender = localStorage.getItem("blenderItems");
+
 
 function storePantry (){
 localStorage.setItem("pantryItems",JSON.stringify([foodItems]));
