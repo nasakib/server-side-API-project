@@ -1,3 +1,8 @@
+
+$( document ).ready(function() {
+  
+
+
 var pantryEl = document.getElementById("pantry");
 var blenderEl = document.getElementById("blender");
 var drinkRecipesEl = document.getElementById("drink-recipes");
@@ -7,6 +12,7 @@ var inputEl =  document.getElementById("food-input");
 
 $("#pantrySubmitBtn").click(function(){
   addFood()
+  storePantry()
 });
 
 var foodItems = [];
@@ -30,12 +36,16 @@ var foodItems = [];
   .then(function(response) {
         console.log(response.hits)
   });
+
+  
+  
 });   
 
 var barItems = [];
 
 $("#blenderSubmitBtn").click(function(){
   addBar()
+  storeBlender()
 });
 
 function addBar() {
@@ -60,5 +70,19 @@ var queryDrinkURL = "https://www.thecocktaildb.com/api/json/v2/9973533/filter.ph
   });
 });  
 
-  
+
+
+function storePantry (){
+
+localStorage.setItem("pantryItems",JSON.stringify([foodItems]));
+console.log(localStorage)
+ };
+
+ function storeBlender (){
+
+localStorage.setItem("blenderItems",JSON.stringify([barItems]));
+console.log(localStorage)
+   };
  
+
+});
