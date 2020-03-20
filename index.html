@@ -14,7 +14,9 @@
   <section class="hero">
     <div class="hero-body">
       <div class="container is-fluid center">
-        <h1 class="title is-size-1">Sup 'N' Sip</h1>
+        <figure class="image">
+          <img src="assets/images/supnsip.png">
+        </figure>
       </div>
     </div>
   </section>
@@ -24,8 +26,8 @@
       <div class="columns">
         <div class="tile is-ancestor">
           <div class="tile is-vertical is-parent">
-            <article class="tile is-child notification is-primary">
-              <p class="title" id="pantry">
+            <article class="tile is-child notification is-primary" id='pantryArticle'>
+              <p class="title" id="pantry"> 
                 Pantry goes here.
               </p>
               <!-- Add food content here, before button, so the button
@@ -38,6 +40,21 @@
               <p class="title">
                 Food recipes go here.
               </p>
+              <table class='table is-bordered is-fullwidth'>
+                <thead>
+                  <tr>
+                    <th>
+                      <strong>Recipes</strong>
+                    </th>
+                    <th>
+                      <strong>Image</strong>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
             </article>
           </div>
 
@@ -68,7 +85,7 @@
                 </div>
 
                 <div class="tile is-vertical is-parent">
-                  <article class="tile is-child notification is-danger">
+                  <article class="tile is-child notification is-danger" id='blenderArticle'>
                     <p class="title" id="blender">
                       Blender goes here.
                     </p>
@@ -82,6 +99,21 @@
                     <p class="title">
                       Drink recipes go here.
                     </p>
+                    <table class='table is-bordered is-fullwidth'>
+                      <thead>
+                        <tr>
+                          <th>
+                            <strong>Recipes</strong>
+                          </th>
+                          <th>
+                            <strong>Image</strong>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+      
+                      </tbody>
+                    </table>
                   </article>
                 </div>
               </div>
@@ -90,7 +122,7 @@
 
           </div>
         </div>
-  </section>
+  </section> 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="assets/script.js"></script>
