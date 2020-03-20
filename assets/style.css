@@ -3,8 +3,18 @@
   justify-content: center;
   align-items: center;
 }
-#pantry,
-#blender {
+#pantryArticle {
+  background-image: url("images/Food-Pantry.jpg");
+  background-size: cover;
+  text-shadow: 2px 2px 2px blue;
+}
+#blenderArticle {
+  background-image: url("images/Bar drinks.jpg");
+  background-size: cover;
+  text-shadow: 2px 2px 2px blue;
+}
+#pantryArticle,
+#blenderArticle {
   position: relative;
 }
 #generate-food,
