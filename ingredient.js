@@ -19,6 +19,7 @@ $("#pantrySubmitBtn").click(function(){
 
 var foodItems = [];
 
+
 function addFood() {
   var foodInput = $("#ingredients").val();
   foodItems.push(foodInput);
@@ -40,7 +41,17 @@ $("#generate-food").click(function() {
   })
   .then(function(response) {
     console.log(response.hits);
+
+    for (i = 0; i < response.hits.length; i++) {
+      console.log(response.hits[i].recipe.label);
+      var newtableRowEl = $("<tr>");
+      newtableRowEl.append("<td>" + response.hits[i].recipe.label + "<td>")
+      $("#recipeLists").append(newtableRowEl);
+      
+    };
   });
+
+ 
   
 });   
 
@@ -73,9 +84,14 @@ $("#generate-drink").click(function() {
   }).then(function(response) {
     console.log(response);
 
+  
   });
   
+  
 });
+
+
+
 
 var storedPantry = localStorage.getItem("pantryItems");
 var storedBlender = localStorage.getItem("blenderItems");
