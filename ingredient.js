@@ -1,4 +1,7 @@
 $( document ).ready(function() {
+  
+
+
   var pantryEl = document.getElementById("pantry");
   var blenderEl = document.getElementById("blender");
   var drinkRecipesEl = document.getElementById("drink-recipes");
@@ -14,6 +17,7 @@ $( document ).ready(function() {
   });
   
   var foodItems = [];
+  
   
   function addFood() {
     var foodInput = $("#ingredients").val();
@@ -36,7 +40,16 @@ $( document ).ready(function() {
     })
     .then(function(response) {
       console.log(response.hits);
+  
+      for (i = 0; i < 5; i++) {
+        console.log(response.hits[i].recipe.label);
+        var newtableRowEl = $("<tr>");
+        newtableRowEl.append("<td>" + "<a href=" + "'"+ response.hits[i].recipe.url + "'" + "target ="+ "'" + "_blank_" + "'" + "</a>" + response.hits[i].recipe.label + "<td>")
+        $("#recipeLists").append(newtableRowEl);   
+      };
+  
     });
+  
     
   });   
   
@@ -69,9 +82,21 @@ $( document ).ready(function() {
     }).then(function(response) {
       console.log(response);
   
+      for (i = 0; i < 5; i++) {
+        console.log(response.drinks[i].strDrink);
+        var newtableRowEl = $("<tr>");
+        newtableRowEl.append("<td>" + response.drinks[i].strDrink + "<td>")
+        $("#drinkLists").append(newtableRowEl);   
+      };
+  
+    
     });
     
+    
   });
+  
+  
+  
   
   var storedPantry = localStorage.getItem("pantryItems");
   var storedBlender = localStorage.getItem("blenderItems");
@@ -89,28 +114,3 @@ $( document ).ready(function() {
    
   
   });
-
-// });  this is the closing curley bracket for the generate drink recipes   
-
-// let card = document.createElement("div");
-// card.className = "card text-white bg-primary mb-3";
-
-// let cardDate = document.createElement("div");
-// cardDate.innerHTML = new Date(dateCity * 1000).toLocaleString("en-US");
-
-// let cardBody = document.createElement("div");
-// cardBody.className = 'card-body';
-
-// let cardIcon = document.createElement("img");
-// cardIcon.src = "http://openweathermap.org/img/wn/" + icon + "@2x.png";
-// title.className = 'card-icon';
-
-// let cardTemp = document.createElement("h5");
-// cardTemp.innerHTML = "Temp: " + tempF + " °F";
-// cardTemp.className = "card-temp";
-
-// let cardHumidity = document.createElement("h5");
-// cardHumidity.innerHTML = "Humidity: " + perHumidity + "%";
-// cardHumidity.className = "card-humidity";
-
- 
