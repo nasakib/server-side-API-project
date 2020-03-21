@@ -46,12 +46,11 @@ $("#generate-food").click(function() {
       console.log(response.hits[i].recipe.label);
       var newtableRowEl = $("<tr>");
       newtableRowEl.append("<td>" + response.hits[i].recipe.label + "<td>")
-      $("#recipeLists").append(newtableRowEl);
-      
+      $("#recipeLists").append(newtableRowEl);   
     };
+
   });
 
- 
   
 });   
 
@@ -83,6 +82,13 @@ $("#generate-drink").click(function() {
     method: "GET"
   }).then(function(response) {
     console.log(response);
+
+    for (i = 0; i < response.drinks.length; i++) {
+      console.log(response.drinks[i].strDrink);
+      var newtableRowEl = $("<tr>");
+      newtableRowEl.append("<td>" + response.drinks[i].strDrink + "<td>")
+      $("#drinkLists").append(newtableRowEl);   
+    };
 
   
   });
