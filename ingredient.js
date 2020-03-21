@@ -42,7 +42,16 @@ $("#generate-food").click(function() {
   .then(function(response) {
     console.log(response.hits);
 
-    for (i = 0; i < response.hits.length; i++) {
+    var numberOfRecipesToLoop;
+
+  if (response.hits.length >= 5) {
+    numberOfRecipesToLoop = 5;
+  } else {
+    numberOfRecipesToLoop = response.hits.length;
+  };
+
+
+    for (i = 0; i < numberOfRecipesToLoop; i++) {
       console.log(response.hits[i].recipe.label);
       var newtableRowEl = $("<tr>");
       newtableRowEl.append("<td>" + response.hits[i].recipe.label + "<td>")
@@ -83,7 +92,15 @@ $("#generate-drink").click(function() {
   }).then(function(response) {
     console.log(response);
 
-    for (i = 0; i < response.drinks.length; i++) {
+  var numberOfDrinksToLoop;
+
+  if (response.drinks.length >= 5) {
+    numberOfDrinksToLoop = 5;
+  } else {
+    numberOfDrinksToLoop = response.drinks.length;
+  };
+
+    for (i = 0; i < numberOfDrinksToLoop; i++) {
       console.log(response.drinks[i].strDrink);
       var newtableRowEl = $("<tr>");
       newtableRowEl.append("<td>" + response.drinks[i].strDrink + "<td>")
