@@ -2,7 +2,6 @@
 $( document ).ready(function() {
   
 
-
 var pantryEl = document.getElementById("pantry");
 var blenderEl = document.getElementById("blender");
 var drinkRecipesEl = document.getElementById("drink-recipes");
@@ -106,14 +105,11 @@ $("#generate-drink").click(function() {
       newtableRowEl.append("<td>" + response.drinks[i].strDrink + "<td>")
       $("#drinkLists").append(newtableRowEl);   
     };
-
   
   });
   
   
 });
-
-
 
 
 var storedPantry = localStorage.getItem("pantryItems");
