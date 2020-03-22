@@ -53,8 +53,8 @@ $("#generate-food").click(function() {
     for (i = 0; i < numberOfRecipesToLoop; i++) {
       console.log(response.hits[i].recipe.label);
       var newtableRowEl = $("<tr>");
-      newtableRowEl.append("<td>" + response.hits[i].recipe.label + "<td>")
-      $("#recipeLists").append(newtableRowEl);   
+      newtableRowEl.append("<td>" + "<a href=" + "'"+ response.hits[i].recipe.url + "'" + "target ="+ "'" + "_blank_" + "'" + "</a>" + response.hits[i].recipe.label + "<td>")
+        $("#recipeLists").append(newtableRowEl);   
     };
 
   });
@@ -99,12 +99,20 @@ $("#generate-drink").click(function() {
     numberOfDrinksToLoop = response.drinks.length;
   };
 
+
+ 
     for (i = 0; i < numberOfDrinksToLoop; i++) {
       console.log(response.drinks[i].strDrink);
+      var recipeURL = "https://www.thecocktaildb.com/drink.php?c=" + response.drinks[i].idDrink
       var newtableRowEl = $("<tr>");
-      newtableRowEl.append("<td>" + response.drinks[i].strDrink + "<td>")
+      newtableRowEl.append("<td>" + "<a href=" + "'" + recipeURL + "'" + "target ="+ "'" + "_blank_" + "'" + "</a>" + response.drinks[i].strDrink + "<td>")
+      // newtableRowEl.append("<td>" + response.drinks[i].strDrink + "<td>")
       $("#drinkLists").append(newtableRowEl);   
     };
+
+    // var recipeURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + response.drinks[i].idDrink
+    console.log(recipeURL)
+   
   
   });
   
