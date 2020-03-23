@@ -95,7 +95,8 @@ $("#generate-drink").click(function() {
 
   if (response.drinks.length >= 5) {
     numberOfDrinksToLoop = 5;
-  } else {
+  } 
+  else {
     numberOfDrinksToLoop = response.drinks.length;
   };
 
